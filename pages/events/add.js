@@ -48,7 +48,7 @@ export default function AddEventPage() {
     if (!res.ok) {
       toast.error('Something Went Wrong')
     } else {
-      const evt = res.json()
+      const evt = await res.json()
       router.push(`/events/${evt.slug}`)
     }
   }
